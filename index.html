@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Valcove</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Our styles -->
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body id="page">
+<h1 id="main_header">Valcove</h1>
+<div class="container">
+    <nav>
+        <ul id="tabs" class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#albums">Albums</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#gear">Synth Recommendations</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#studio">Studio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#studio">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane active">
+            <h2>This is Tab 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequuntur officia quisquam
+                repellendus sequi? Ad architecto aut dicta labore molestias nulla perferendis recusandae vel
+                veritatis.</p>
+        </div>
+
+        <div id="albums" class="tab-pane">
+            <h2>Thanks for visiting Tab 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam fuga mollitia repudiandae sit
+                voluptate? Adipisci delectus et molestiae natus omnis quis, vitae voluptatem voluptatibus.
+                Quisquam?</p>
+        </div>
+
+        <div id="gear" class="tab-pane">
+            <h2>Synthesizer Recommendations</h2>
+            <div id ="synth_recs_div">
+                <div id="synth_recs_budget_div">
+                    <form id = "synth_recs_budget_form">
+                        <input type="radio" name="budget_1" id="budget_1" data-budget="1"/>
+                        <label for = "budget_1">Up to $500</label>
+                        <br>
+                        <input type="radio" name="budget_2" id="budget_2" data-budget="2"/>
+                        <label for = "budget_2">Up to $2000</label>
+                        <br>
+                        <input type="radio" name="budget_3" id="budget_3" data-budget="3"/>
+                        <label for = "budget_3">Over $2000</label>
+                        <br>
+                    </form>
+                </div>
+                <hr>
+                <div id="synth_recs_type_div">
+                    <form id="synth_recs_type_form">
+                        <input type="radio" name="keyboard" id="keyboard" data-type="keyboard"/>
+                        <label for = "keyboard">Keyboard</label>
+                        <br>
+                        <input type="radio" name="modular" id="modular" data-type="modular"/>
+                        <label for = "modular">Modular</label>
+                        <br>
+                        <input type="radio" name="drum" id="drum" data-type="drum"/>
+                        <label for = "drum">Drum Machine</label>
+                        <br>
+                        <br>
+                    </form>
+                </div>
+                <button id ="synth_recs_button" class="button">Submit</button>
+            </div>
+            <h2>Effects Recommendations</h2>
+            <div id ="effects_recs_div">
+                <div id="effects_recs_budget_div">
+                    <form id = "effects_recs_budget_form">
+                        <input type="radio" name="e_budget_1" id="e_budget_1" data-ebudget="1"/>
+                        <label for = "e_budget_1">Up to $500</label>
+                        <br>
+                        <input type="radio" name="e_budget_2" id="e_budget_2" data-ebudget="2"/>
+                        <label for = "e_budget_2">Up to $2000</label>
+                        <br>
+                        <input type="radio" name="e_budget_3" id="e_budget_3" data-ebudget="3"/>
+                        <label for = "e_budget_3">Over $2000</label>
+                        <br>
+                    </form>
+                </div>
+                <hr>
+                <div id="effects_recs_type_div">
+                    <form id="effects_recs_type_form">
+                        <input type="radio" name="eq" id="eq" data-type="eq"/>
+                        <label for = "eq">Equalizer</label>
+                        <br>
+                        <input type="radio" name="compressor" id="compressor" data-type="compressor"/>
+                        <label for = "compressor">Compressor</label>
+                        <br>
+                        <input type="radio" name="delay" id="delay" data-type="delay"/>
+                        <label for = "delay">Delay</label>
+                        <br>
+                        <br>
+                    </form>
+                </div>
+                <button id ="effects_recs_button" class="button">Submit</button>
+            </div>
+        </div>
+
+        <div id="effects" class="tab-pane">
+
+        </div>
+
+
+
+        <div id="studio" class="tab-pane">
+            <h2>Studio Slideshow</h2>
+            <p>I started building my studio in 2013.</p>
+
+
+            <p class="image_class" id="image1">This is the first image.</p>
+            <p class="image_class" id="image2">This is the second image.</p>
+            <p class="image_class" id ="image3">This is the third image.</p>
+            <p class="image_class" id ="image4">This is the fourth image.</p>
+
+
+            <button id="previous">Previous</button>
+            <button id="next">Next</button>
+
+        </div>
+
+        <div id="contact" class="tab-pane">
+            <h2>Tab 3 is the best tab</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium aspernatur commodi deleniti
+                dignissimos dolores dolorum ea eum excepturi omnis, quos, repellat saepe sed soluta!</p>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
+<script src="code.js"></script>
+</body>
+</html>

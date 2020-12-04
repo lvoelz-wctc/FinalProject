@@ -1,0 +1,37 @@
+body {
+    padding: 25px;
+    background-color: #3b5175;
+}
+
+.tab-pane {
+    padding: 10px;
+}
+#home {
+    background-color: #95a7c4;
+}
+
+#albums {
+    background-color: #95a7c4;
+}
+
+#gear {
+    background-color: #95a7c4;
+}
+
+#studio {
+    background-color: #95a7c4;
+}
+
+#contact {
+    background-color: #95a7c4;
+}
+
+#main_header {
+    margin: auto;
+    width: 10%;
+    padding-bottom: 30px;
+}
+
+.image_class {
+    display: none;
+}
