@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09108945-7f61-4c85-839d-253b0def4fd4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/code.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="09108945-7f61-4c85-839d-253b0def4fd4" name="Default Changelist" comment="Script and Style Revisions" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,12 +45,35 @@
       <workItem from="1606795288714" duration="5707000" />
       <workItem from="1606870646619" duration="1807000" />
       <workItem from="1607048031662" duration="43477000" />
-      <workItem from="1607389359914" duration="8496000" />
+      <workItem from="1607389359914" duration="8806000" />
     </task>
+    <task id="LOCAL-00001" summary="Script and Style Revisions">
+      <created>1607401335474</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607401335474</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Script and Style Revisions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Script and Style Revisions" />
   </component>
   <component name="WindowStateProjectService">
     <state x="714" y="338" key="Github.ShareDialog" timestamp="1607066834002">
