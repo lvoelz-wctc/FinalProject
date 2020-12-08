@@ -26,38 +26,83 @@
                 <a class="nav-link" href="#studio">Studio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#studio">Contact</a>
+                <a class="nav-link" href="#contact">Contact</a>
             </li>
         </ul>
     </nav>
 
     <div class="tab-content">
         <div id="home" class="tab-pane active">
-            <h2>This is Tab 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequuntur officia quisquam
-                repellendus sequi? Ad architecto aut dicta labore molestias nulla perferendis recusandae vel
-                veritatis.</p>
+            <h2>Sounds For Dynamic States</h2>
+            <p>Welcome to the home page for the synthesizer and electronic music project Valcove. I began Valcove in 2014, shortly
+            after moving to Chicago and setting up my first studio in my apartment. Over the last six years I've released several
+            albums, begun playing live, and expanded my studio into a dedicated space. While you're here, be sure to check out:
+            <ul>
+            <li>The album information page</li>
+            <li>A synth picker that helps you decide on gear based on budget and equipment type.</li>
+            <li>A slideshow of my current studio setup</li>
+            <li>Contact information for updates on releases and upcoming shows</li>
+        </ul></p>
         </div>
 
         <div id="albums" class="tab-pane">
-            <h2>Thanks for visiting Tab 2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam fuga mollitia repudiandae sit
-                voluptate? Adipisci delectus et molestiae natus omnis quis, vitae voluptatem voluptatibus.
-                Quisquam?</p>
+            <h2>Albums</h2>
+            <div id="master_album_container">
+                <div id="album_container_1">
+                    <div id="album_1"></div>
+                    <h4 class="album_title">Eastward</h4>
+                    <div id="album_1_text" class="album_text"><p>I released the Eastward demo on April 06, 2015. It represents about two years of work, starting
+                    around when I first moved to Chicago. At this stage I was obsessed with Monolake/Robert Henke,
+                    and the music is a bit of an awkward attempt at copying his style without branching off into
+                    finding my own voice. That said, I'm proud of this album for its status as a stepping stone
+                    into my later musical output. A beat-driven version of "Redaction" sometimes makes its way
+                    into my live sets these days, as the droning FM background pads are the one section of the demo
+                    that I feel I really nailed.</p>
+                </div>
+                </div>
+
+                <div id="album_container_2">
+                    <div id="album_2"></div>
+                    <h4 class="album_title">Forge</h4>
+                    <div id="album_2_text" class="album_text">Forge is my first full-length album, released on the French netlabel Ultratech records on May
+                        30, 2018. This album was the first time I was able to really latch onto a cohesive sound,
+                        and had started experimenting with heavily-reverbed walls of sound based on slowly-changing
+                        wavetables and FM pads - Arturia's Synclavier V and Live 10's new Wavetable synth are featured
+                        very heavily here. My favorite track by far is "Chevron," which I wrote in less than a week after the
+                        label asked for one my track to round the album out into a more industry-standard 8 tracks. The
+                        majority of that track's instruments are Diva, which made creating it absolutely murder on my CPU
+                        (more than a few near-crashes), but I love what I was finally able to coax out of it.</p></div>
+                </div>
+
+                    <div id="album_container_3">
+                        <div id="album_3"> </div>
+                        <h4 class="album_title">Wired Explorations</h4>
+                        <div id="album_3_text" class="album_text">
+                            <p>Mid-2018 through late 2020 was a fairly quiet year thanks to the one-two-punch of writer's block
+                            and a cross-state move setting me behind in the writing process. By the end of 2019 I had finally
+                            started jamming again, and found in my new home state of Wisconsin an opportunity to release a track
+                            on a split of local techno producers. The Wired Explorations Volume 1 splilt features my track
+                            "Supplicant," which I used to experiment with more aggressive and dance-floor focused sounds
+                            while still maintaining an ambient backbone. I'd highly recommend this album to interested listeners
+                            as the other producers on it contributed some excellent work.</p></div>
+                    </div>
+            </div>
         </div>
+
+
 
         <div id="gear" class="tab-pane">
             <h2>Synthesizer Recommendations</h2>
             <div id ="synth_recs_div">
                 <div id="synth_recs_budget_div">
                     <form id = "synth_recs_budget_form">
-                        <input type="radio" name="budget_1" id="budget_1" data-budget="1"/>
+                        <input type="radio" name="synth_budget" id="budget_1" data-userbudget="1"/>
                         <label for = "budget_1">Up to $500</label>
                         <br>
-                        <input type="radio" name="budget_2" id="budget_2" data-budget="2"/>
+                        <input type="radio" name="synth_budget" id="budget_2" data-userbudget="2"/>
                         <label for = "budget_2">Up to $2000</label>
                         <br>
-                        <input type="radio" name="budget_3" id="budget_3" data-budget="3"/>
+                        <input type="radio" name="synth_budget" id="budget_3" data-userbudget="3"/>
                         <label for = "budget_3">Over $2000</label>
                         <br>
                     </form>
@@ -65,85 +110,95 @@
                 <hr>
                 <div id="synth_recs_type_div">
                     <form id="synth_recs_type_form">
-                        <input type="radio" name="keyboard" id="keyboard" data-type="keyboard"/>
+                        <input type="radio" name="synth_type" id="keyboard" data-usertype="keyboard"/>
                         <label for = "keyboard">Keyboard</label>
                         <br>
-                        <input type="radio" name="modular" id="modular" data-type="modular"/>
+                        <input type="radio" name="synth_type" id="modular" data-usertype="modular"/>
                         <label for = "modular">Modular</label>
                         <br>
-                        <input type="radio" name="drum" id="drum" data-type="drum"/>
+                        <input type="radio" name="synth_type" id="drum" data-usertype="drum"/>
                         <label for = "drum">Drum Machine</label>
                         <br>
                         <br>
                     </form>
                 </div>
                 <button id ="synth_recs_button" class="button">Submit</button>
-            </div>
-            <h2>Effects Recommendations</h2>
-            <div id ="effects_recs_div">
-                <div id="effects_recs_budget_div">
-                    <form id = "effects_recs_budget_form">
-                        <input type="radio" name="e_budget_1" id="e_budget_1" data-ebudget="1"/>
-                        <label for = "e_budget_1">Up to $500</label>
-                        <br>
-                        <input type="radio" name="e_budget_2" id="e_budget_2" data-ebudget="2"/>
-                        <label for = "e_budget_2">Up to $2000</label>
-                        <br>
-                        <input type="radio" name="e_budget_3" id="e_budget_3" data-ebudget="3"/>
-                        <label for = "e_budget_3">Over $2000</label>
-                        <br>
-                    </form>
-                </div>
-                <hr>
-                <div id="effects_recs_type_div">
-                    <form id="effects_recs_type_form">
-                        <input type="radio" name="eq" id="eq" data-type="eq"/>
-                        <label for = "eq">Equalizer</label>
-                        <br>
-                        <input type="radio" name="compressor" id="compressor" data-type="compressor"/>
-                        <label for = "compressor">Compressor</label>
-                        <br>
-                        <input type="radio" name="delay" id="delay" data-type="delay"/>
-                        <label for = "delay">Delay</label>
-                        <br>
-                        <br>
-                    </form>
-                </div>
-                <button id ="effects_recs_button" class="button">Submit</button>
+                <br>
+                <br>
+                <img id="synthRecImage">
+                <p id="synthRecText"></p>
             </div>
         </div>
-
-        <div id="effects" class="tab-pane">
-
-        </div>
-
-
 
         <div id="studio" class="tab-pane">
             <h2>Studio Slideshow</h2>
-            <p>I started building my studio in 2013.</p>
+            <p>I started building my studio in 2013. Over the last seven years I've used each of my instruments
+                to contribute to my albums.</p>
 
+        <div class="image_class" id="image1">
+            <p><img src="images/eurorack.jpg" height="378" width="504"/></p>
+            <p>The E352 Cloud Terrarium is the main audio source of my eurorack setup. Its wavetable system
+                is particularly good for light, plucky leads. I usually sequence it with either the Vector or MIDI
+                from Live.</p>
+        </div>
 
-            <p class="image_class" id="image1">This is the first image.</p>
-            <p class="image_class" id="image2">This is the second image.</p>
-            <p class="image_class" id ="image3">This is the third image.</p>
-            <p class="image_class" id ="image4">This is the fourth image.</p>
+        <div class="image_class" id="image2">
+            <p><img src="images/5u.jpg" height ="504" width="378"/></p>
+            <p>I've been working on this 5U rig since 2017. I got most of my utility modules from
+                Synthesizers.com to keep things cost-effective. The Club of the Knobs Fixed Filter Bank
+                is amazing at tone-shaping, with a lot more subtlety than you'd get out of a standard
+                lowpass filter.</p>
+        </div>
 
+        <div class="image_class" id="image3">
+            <p><img src="images/p10.jpg" height="504" width="378"/></p>
+            <p>I picked up this Prophet 10 almost immediately after I heard Sequential was rereleasing it.
+                It's been the main source of pads for most of my ambient music lately. The "Vintage" knob
+                for switching oscillator stability makes a surprisingly noticeable difference - setting it to "1"
+                almost makes it sound like there's an LFO on the fine tuning.</p>
+        </div>
 
-            <button id="previous">Previous</button>
-            <button id="next">Next</button>
-
+        <div class="image_class" id="image4">
+            <p><img src="images/sh2.jpg" height="378" width="504"/></p>
+            <p>I found this SH-2 from a local seller who found it while cleaning out his friend's basement.
+                While it's monophonic, the second oscillator puts it a cut above the SH-1 in terms of sound options.
+                Some folks say its oscillators on their own are stronger than the Jupiter 8's.</p>
+        </div>
+        <button id="previous">Previous</button>
+        <button id="next">Next</button>
         </div>
 
         <div id="contact" class="tab-pane">
-            <h2>Tab 3 is the best tab</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium aspernatur commodi deleniti
-                dignissimos dolores dolorum ea eum excepturi omnis, quos, repellat saepe sed soluta!</p>
+            <h2>Contact</h2>
+            <p>Provide your contact information for updates on upcoming shows, streams and albums.</p>
+            <form id="address_form">
+                <label for = "delivery_1" class="address_form">Name:</label>
+                <input type="text" class="address_input" name="delivery" id="delivery_1" data-delivery="name"/>
+                <br>
+                <label for = "delivery_2" class="address_form" >Address:</label>
+                <input type="text" class="address_input" name="delivery" id="delivery_2" data-delivery="address"/>
+                <br>
+                <label for = "delivery_3" class="address_form">Phone Number:</label>
+                <input type="text" class="address_input" name="delivery" id="delivery_3" data-delivery="phone"/>
+                <br>
+                <label for = "delivery_4" class="address_form">Email:</label>
+                <input type="text" class="address_input" name="delivery" id="delivery_4" data-delivery="phone"/>
+                <br>
+                <br>
+                <button id = "submit_address">Submit Address</button>
+                <br>
+                <br>
+                <div id="user_address">
+                    <h4>Address</h4>
+                    <p id="customer_name"></p>
+                    <p id="customer_address"></p>
+                    <p id="customer_phone"></p>
+                    <p id="customer_email"></p>
+                </div>
+            </form>
         </div>
-
     </div>
 </div>
-
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"

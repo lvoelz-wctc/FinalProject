@@ -1,10 +1,14 @@
 body {
     padding: 25px;
     background-color: #3b5175;
+
 }
 
 .tab-pane {
     padding: 10px;
+    border-width: 10px;
+    border-style: ridge;
+    Border-color: #dae8ed
 }
 #home {
     background-color: #95a7c4;
@@ -34,4 +38,23 @@ body {
 
 .image_class {
     display: none;
+}
+
+.address_form {
+    width:150px;
+}
+
+.address_input {
+    width: 300px;
+}
+
+#user_address {
+    display:none;
+}
+.album_text{
+    margin-top: 20px;
+}
+
+.album_title{
+    margin-top:20px;
 }
