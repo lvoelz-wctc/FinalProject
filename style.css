@@ -51,10 +51,18 @@ body {
 #user_address {
     display:none;
 }
-.album_text{
-    margin-top: 20px;
-}
 
 .album_title{
     margin-top:20px;
+}
+
+a:hover
+{
+    color:white;
+}
+
+.album_text{
+    width: 75%;
+    padding-bottom: 50px;
+    margin-top: 10px;
 }

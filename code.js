@@ -20,9 +20,6 @@ $(document).ready(
             }
         }
 
-
-        //---Synth Picker Images---//
-
         //Studio Slide Vars--//
         var currentImage = 1;
         var totalImages = 4;
@@ -120,13 +117,13 @@ $(document).ready(
                 else if (synthBudget === 2){
                     $("#synthRecText").text("The Erica Synths Fusion Drone System offers a powerful modular patching interface for" +
                         "$1789. Each of the primary modules uses vacuum tubes to generate powerful intense, noisy waveforms suited" +
-                        "perfectly for aggressive and experimental performance. The Fusion Drone System is fully modular, so when" +
-                        "you're ready to try something new you can remove the default modules and replace them as needed.");
+                        " perfectly for aggressive and experimental performance. The Fusion Drone System is fully modular, so when" +
+                        " you're ready to try something new you can remove the default modules and replace them as needed.");
                     $("#synthRecImage").attr("src", "images/fusiondrone.jpg");
                 }
                 else if (synthBudget === 3){
                     $("#synthRecText").text("Discerning modular synths players know the style started with Moog Music. Get back" +
-                        "to the masters with the Moog Model 10, a $10,000 near-exact recreation of the first Moog modular system from 1971. The" +
+                        " to the masters with the Moog Model 10, a $10,000 near-exact recreation of the first Moog modular system from 1971. The" +
                         "two oscillators, ladder filter, and 907 fixed filter bank will give you the smooth analog sounds that permeated" +
                         "the 70s.");
                     $("#synthRecImage").attr("src", "images/moogmten.jpg");
@@ -135,7 +132,7 @@ $(document).ready(
             else if (synthType === "drum"){
                 if (synthBudget === 1){
                     $("#synthRecText").text("At only $399.99, Roland has distilled their legendary drum machine history into the affordable Roland TR-6S" +
-                        "Rhythm Performer. The digital sound engine uses Roland's own Analog Circuit Behavior to give a near-perfect" +
+                        " Rhythm Performer. The digital sound engine uses Roland's own Analog Circuit Behavior to give a near-perfect" +
                         "rendition of their classic analog drum machine sounds.");
                     $("#synthRecImage").attr("src", "images/tr6s.png");
                 }
@@ -149,7 +146,7 @@ $(document).ready(
                     $("#synthRecText").text("Ready to go all-in on a legendary drum machine? Try hunting down a used Roland TR-808." +
                         "The drum machine that defined house music in the 80s and 90s can still be found on vintage gear exchange sites" +
                         "for devoted performers who are willing to spend some extra time and money. Prices usually range between" +
-                        "$5000 and $7000 based on condition.");
+                        " $5000 and $7000 based on condition.");
                     $("#synthRecImage").attr("src", "images/tr-808.png");
                 }
             }
@@ -164,14 +161,86 @@ $(document).ready(
         //submit and show address
         function submitAddress(event) {
             event.preventDefault();
-            var name = $("#delivery_1").val();
-            var address = $("#delivery_2").val();
-            var phone = $("#delivery_3").val();
-            var email =$("#delivery_4").val();
+            var name = $("#name").val();
+            var address = $("#address").val();
+            var phone = $("#phone").val();
+            var email =$("#email").val();
             $("#user_address").show();
             $("#customer_name").text(name);
             $("#customer_address").text(address);
             $("#customer_phone").text(phone);
             $("#customer_email").text(email);
         }
+
+        //---------------------------Validations--------------------------//
+        var myRules = {
+            name:
+                {
+                    required: true,
+                    minlength: 1,
+                    maxlength: 100
+                },
+
+            address:
+                {
+                    required: true,
+                    minlength: 1,
+                    maxlength: 100
+                },
+
+            phone:
+                {
+                    required: true,
+                    minlength: 10,
+                    maxlength: 10,
+                    digits: true
+                },
+
+            email:
+                {
+                    required: true,
+                    minlength: 1,
+                    maxlength: 100
+                }
+        }
+
+        var myMessages = {
+            name:
+                {
+                    required: "Enter your name.",
+                    minlength: "Name must be between 1 and 100 characters.",
+                    maxlength: "Name must be between 1 and 100 characters."
+                },
+
+            address:
+                {
+                    required: "Enter your address.",
+                    minlength: "Address must be between 1 and 100 characters.",
+                    maxlength: "Address must be between 1 and 100 characters."
+                },
+
+            phone:
+                {
+                    required: "Enter your phone number.",
+                    minlength: "Phone number must be ten digits.",
+                    maxlength: "Phone number must be ten digits.",
+                    digits: "Phone number must contain only numbers."
+                },
+            email:
+                {
+                    required: "Enter your email address.",
+                    minlength: "Email must be between 1 and 100 characters.",
+                    maxlength: "Email must be between 1 and 100 characters."
+                }
+        }
+
+        $("#address_form").validate(
+            {
+                submitHandler: submitAddress,
+                rules: myRules,
+                messages: myMessages
+            }
+        );
+        //-------------------Validations--------------------//
+
     });
